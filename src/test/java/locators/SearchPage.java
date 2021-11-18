@@ -27,7 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
     @FindBy(xpath = "/html/body/div[6]/div[2]/div/div/div[1]")
     public WebElement searchwrong;
 
-        public void openSearch(){
+        public void openIntertop(){
 
             driver.get("https://intertop.ua/ua/");
         }

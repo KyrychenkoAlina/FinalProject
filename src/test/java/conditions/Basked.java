@@ -14,25 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class Basked {
-
-    WebDriver driver;
-    BaskedPage baskedPage;
-
-    @BeforeEach
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-        baskedPage = new BaskedPage(driver);
-    }
-
-    @AfterEach
-    public void tearDown() {
-        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-        driver.close();
-    }
+public class Basked extends BaseTest{
 
     @Test
     public void AddItemToBasked(){
@@ -52,7 +34,6 @@ public class Basked {
         String iconDisplayed = baskedPage.iconDisplayed.getText();
         Assertions.assertEquals(iconDisplayed,"1");
         baskedPage.wait.until(ExpectedConditions.visibilityOf(baskedPage.iconDisplayed));
-
     }
 
     @Test

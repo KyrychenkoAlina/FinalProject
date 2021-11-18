@@ -14,10 +14,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Search extends BaseTest {
     @BeforeEach
-    public void burkecollection(){
+    public void openIntertop(){
 
-        searchPage.openSearch();
-
+        searchPage.openIntertop();
     }
 
     @Test
@@ -25,7 +24,6 @@ public class Search extends BaseTest {
         searchPage.searchFind.sendKeys("Geox Phaolae");
         searchPage.searchButton.click();
         WebElement result = driver.findElement(By.xpath("//*[@id=\"app\"]/div[2]/div/div/div[1]"));
-
     }
 
     @Test
@@ -33,7 +31,6 @@ public class Search extends BaseTest {
         searchPage.searchFind.sendKeys("5606428996915");
         searchPage.searchButton.click();
         WebElement result = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[1]/div/div"));
-
     }
 
     @Test

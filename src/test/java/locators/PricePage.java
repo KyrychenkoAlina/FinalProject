@@ -17,8 +17,7 @@ public class PricePage {
         this.wait = new WebDriverWait(this.driver, 15);
         PageFactory.initElements(driver, this);
     }
-   // @FindBy(id = "basket_add_preview")
-   //public WebElement addToBasked;
+
     @FindBy(id = "basket_add_preview")
     public WebElement addToBasked;
 

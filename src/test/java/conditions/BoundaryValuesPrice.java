@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 public class BoundaryValuesPrice extends BaseTest{
 
 
-
     @Test
     public void BuyMinValidPrice(){
         driver.get("https://intertop.ua/ua/product/brushes-and-sponges-ecco-242813");
